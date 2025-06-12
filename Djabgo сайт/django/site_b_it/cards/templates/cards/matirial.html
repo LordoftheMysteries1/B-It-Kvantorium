@@ -1,0 +1,213 @@
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Микроконтроллеры и IoT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="start.html" class="nav-link">Б-IT</a></li>
+            <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Материал</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Карточки</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Проекты</a></li>
+          </ul>
+        </header>
+      </div> -->
+
+
+
+{% extends 'cards/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="">Изучаемые блоки с прошлого модуля</h1>
+    <hr>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="">
+                <div class="card-body">
+                    <h5 class="card-title">Python ПП</h5>
+                    <ol>
+                        <li class="card-text">Процедурное программирование</li>
+                        <li class="card-text">Алгоритмы</li>
+                        <li class="card-text">Объектное ориентированное программирование</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info1" aria-expanded="false" aria-controls="info1">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="">
+                <div class="card-body">
+                    <h5 class="card-title">HTML, CSS и макетирование</h5>
+                    <ol>
+                        <li class="card-text">HTML</li>
+                        <li class="card-text">CSS</li>
+                        <li class="card-text">Сложное Макетирование</li>
+                        <li class="card-text">Фреймворк bootstrap</li>
+                        <li class="card-text">Back-end</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info2" aria-expanded="false" aria-controls="info2">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="">
+                <div class="card-body">
+                    <h5 class="card-title">Микроэлектроника</h5>
+                    <ol>
+                        <li class="card-text">Работа электричества</li>
+                        <li class="card-text">Устройство Arduino</li>
+                        <li class="card-text">Электронные компоненты</li>
+                        <li class="card-text">Передача информации</li>
+                        <li class="card-text">Пайка</li>
+                        <li class="card-text">IoT</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info3" aria-expanded="false" aria-controls="info3">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse mt-3" id="info1">
+        <div class="card card-body">
+            Python — это высокоуровневый язык программирования, который отличается простотой и читаемостью синтаксиса, что делает его идеальным для начинающих разработчиков. Он широко используется в различных областях, включая веб-разработку, анализ данных, машинное обучение и автоматизацию задач, благодаря обширной экосистеме библиотек и фреймворков, таких как Django, Flask, Pandas и TensorFlow.
+        </div>
+    </div>
+
+    <div class="collapse mt-3" id="info2">
+        <div class="card card-body">
+            HTML (HyperText Markup Language) — это стандартный язык разметки, используемый для создания веб-страниц. Он позволяет структурировать контент, определяя элементы, такие как заголовки, абзацы, списки и изображения.CSS (Cascading Style Sheets) — это язык стилей, который используется для оформления HTML-документов. С его помощью можно задавать цвета, шрифты, отступы и другие визуальные характеристики элементов на странице, что позволяет создавать привлекательные и удобные интерфейсы.Макетирование (layout) — это процесс организации и размещения элементов на веб-странице. Он включает в себя использование различных техник, таких как флексбокс и CSS Grid, для создания адаптивных и отзывчивых дизайнов, которые хорошо выглядят на разных устройствах и экранах.</p>
+        </div>
+    </div>
+
+    <div class="collapse mt-3" id="info3">
+        <div class="card card-body">
+            Arduino — это платформа для разработки электроники, которая позволяет создавать интерактивные проекты с использованием микроконтроллеров. Она включает в себя как аппаратные компоненты, такие как платы Arduino, так и программное обеспечение для написания и загрузки кода, что делает её доступной для как начинающих, так и опытных разработчиков, позволяя реализовывать идеи в области автоматизации, робототехники и IoT (Интернет вещей).
+        </div>
+    </div>
+
+    <h2 class="mt-5 ">Изучаемые блоки в данном модуле</h2>
+    <hr>
+    <!-- <p class="text-center">Современные микроконтроллеры открывают новые возможности для разработки IoT-решений.</p> -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mb-4">
+                <img src="{% static 'images/kard 1.png' %}" class="card-img-top col-md-4 rounded mx-auto d-block" alt="Карточка 1" style="width: 30%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">ООП в Python и Алгоритмы</h5>
+                    <ol>
+                        <li class="card-text">ООП в Python</li>
+                        <li class="card-text">Классы и объекты</li>
+                        <li class="card-text">Наследование</li>
+                        <li class="card-text">Полиморфизм</li>
+                        <li class="card-text">Алгоритмы</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info4" aria-expanded="false" aria-controls="info4">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-4">
+                <img src="{% static 'images/kard2.png' %}" class="card-img-top col-md-4 rounded mx-auto d-block" alt="Карточка 2" style="width: 30%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Back-end на Python и DB на SQL</h5>
+                    <ol>
+                        <li class="card-text">Back-end на Python</li>
+                        <li class="card-text">Flask</li>
+                        <li class="card-text">Django</li>
+                        <li class="card-text">SQL</li>
+                        <li class="card-text">Реляционные базы данных</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info5" aria-expanded="false" aria-controls="info5">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mb-4">
+                <img src="{% static 'images/kard3.png' %}" class="card-img-top col-md-4 rounded mx-auto d-block" alt="bootstrap image size" style="width: 30%; height: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Микроконтроллеры и IoT</h5>
+                    <ol>
+                        <li class="card-text">Микроконтроллеры</li>
+                        <li class="card-text">IoT</li>
+                        <li class="card-text">Протоколы связи</li>
+                        <li class="card-text">Сенсоры</li>
+                        <li class="card-text">Автоматизация</li>
+                    </ol>
+                    <button class="btn btn-primary toggle-info" data-toggle="collapse" data-target="#info6" aria-expanded="false" aria-controls="info6">
+                        Показать информацию
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-3" id="info4">
+            <div class="card card-body">
+                Объектно-ориентированное программирование (ООП) в Python позволяет создавать структуры данных, которые моделируют реальные объекты, используя классы и экземпляры. Алгоритмы, в свою очередь, представляют собой последовательности шагов для решения задач, и их эффективность может быть значительно повышена при использовании принципов ООП, таких как инкапсуляция и наследование.
+            </div>
+        </div>
+
+        <div class="collapse mt-3" id="info5">
+            <div class="card card-body">
+                Back-end разработка на Python включает в себя создание серверной логики и взаимодействие с базами данных, что позволяет обрабатывать запросы от клиентов и управлять данными. Использование SQL для работы с базами данных обеспечивает эффективное хранение, извлечение и манипуляцию данными, что является ключевым аспектом в разработке современных веб-приложений.
+            </div>
+        </div>
+
+        <div class="collapse mt-3" id="info6">
+            <div class="card card-body">
+                Микроконтроллеры являются основными компонентами многих устройств для Интернета вещей (IoT), так как они обеспечивают управление и обработку данных, необходимые для автоматизации и взаимодействия с окружающей средой. Эти небольшие, экономичные и энергоэффективные устройства могут быть использованы в различных применениях, от умных домашний систем и носимых устройств до промышленного оборудования и систем мониторинга окружающей среды. Современные микроконтроллеры обладают способностью подключаться к интернету, что позволяет им обмениваться данными с другими устройствами и облачными сервисами.
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript для изменения текста кнопки и управления видимостью блоков
+    document.querySelectorAll('.toggle-info').forEach(button => {
+        button.addEventListener('click', function () {
+            const target = this.getAttribute('data-target');
+            const isCollapsed = document.querySelector(target).classList.contains('show');
+
+            // Закрыть все блоки
+            document.querySelectorAll('.collapse').forEach(collapse => {
+                collapse.classList.remove('show');
+            });
+
+            // Скрыть текст всех кнопок
+            document.querySelectorAll('.toggle-info').forEach(btn => {
+                btn.innerText = 'Показать информацию';
+            });
+
+            // Если текущий блок был закрыт, открыть его
+            if (!isCollapsed) {
+                document.querySelector(target).classList.add('show');
+                this.innerText = 'Скрыть информацию';
+            }
+        });
+    });
+</script>

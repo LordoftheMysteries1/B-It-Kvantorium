@@ -1,0 +1,41 @@
+{% extends 'cards/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <a href="{% url 'cards' %}" class="my-3 btn btn-dark btn-sm">Go Back</a>
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <!-- the form for adding a card -->
+                <form method="POST" enctype="multipart/form-data" action="">
+                    <!-- this is for securing the form from malicious attacks -->
+                    {% csrf_token %}
+                    <!-- this is the label and input for the Title -->
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Card Title</label>
+                        <input required type="text" name="title" class="form-control" placeholder="Enter Card Title">
+                    </div>
+                    <!-- this is the label and input for the Description -->
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Description</label>
+                        <input required type="text" name="description" class="form-control" placeholder="Card Description">
+                    </div>
+                    <!-- this is the label and input for the Associative imagery -->
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Associative imagery
+                        </label>
+                        <input required type="text" name="associative_imagery" class="form-control" placeholder="Associative imagery">
+                    </div>
+                    <!-- this is the label and input for the Image -->
+                    <div class="mb-3">
+                        <label class="form-label font-weight-bold">Upload Image:</label>
+                        <input required type="file" name="image-file" class="form-control" id="customFile" />
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-success btn-block mb-4">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        .custom-list {
+            list-style-type: none; /* Убираем стандартные маркеры */
+            padding: 0; /* Убираем отступы */
+        }
+        
+        .custom-list li {
+            position: relative; /* Устанавливаем позицию для псевдоэлемента */
+            padding-left: 20px; /* Отступ слева для текста */
+        }
+        
+        .custom-list li::before {
+            content: '•'; /* Используем точку как маркер */
+            position: absolute; /* Абсолютное позиционирование */
+            left: 0; /* Сдвигаем маркер влево */
+            color: #007bff; /* Цвет маркера */
+            font-size: 1.2em; /* Размер маркера */
+        }
+        </style>
+    
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+{% extends 'cards/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+
+    <div class="container mt-5">
+        <h1>Мои проекты</h1>
+        <hr>
+
+        <!-- Проект 1: Телеграмм бот ChatGPT -->
+        <!-- <section class="project-section text-white mb-5" style="background-color: #007bff; padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h2>Телеграмм бот ChatGPT</h2>
+                        <p>Бот, который использует API ChatGPT для общения с пользователями в мессенджере Telegram.</p>
+                        <div class="col text-center mb-5">
+                            <h4 class="col text-center mt-3">Используемые знания</h4>
+                            <ul class="custom-list">
+                                <li class="card-text">Микроконтроллеры</li>
+                                <li class="card-text">IoT</li>
+                                <li class="card-text">Протоколы связи</li>
+                                <li class="card-text">Сенсоры</li>
+                                <li class="card-text">Автоматизация</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/tg_bot.jpeg' %}" alt="Телеграмм бот ChatGPT" class="img-fluid rounded-circle" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="project-section text-white mb-5" style="background-color: #007bff; padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h2>Телеграмм бот ChatGPT</h2>
+                        <p>Бот, который использует API ChatGPT для общения с пользователями в мессенджере Telegram.</p>
+                        <div class="col text-center mb-5">
+                            <h4 class="col text-center mt-3">Используемые знания</h4>
+                            <ul class="custom-list">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/tg_bot.jpeg' %}" alt="Телеграмм бот ChatGPT" class="img-fluid rounded-circle" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проект 2: Динозаврик на Arduino -->
+        <section class="project-section text-white mb-5" style="background-color: #28a745; padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h2>Динозаврик на Arduino</h2>
+                        <p>Проект, в котором создается управляемый динозаврик с использованием платформы Arduino и дисплея.</p>
+                        <!-- <a href="#" class="btn btn-light mt-3">Узнать больше</a> -->
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/dino.jpeg' %}" alt="Динозаврик на Arduino" class="img-fluid rounded-circle" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проект 3: Сайт обо мне -->
+        <section class="project-section text-white mb-5" style="background-color: #dc3545; padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h2>Сайт обо мне</h2>
+                        <p>Личный сайт, представляющий информацию обо мне, моих навыках и проектах.</p>
+                        <!-- <a href="#" class="btn btn-light mt-3">Узнать больше</a> -->
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/about me.jpeg' %}" alt="Сайт обо мне" class="img-fluid rounded-circle" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Проект 4: Игра Space Avengers -->
+        <section class="project-section text-white mb-5" style="background-color: #17a2b8; padding: 60px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-center text-md-left">
+                        <h2>Игра Space Avengers</h2>
+                        <p>Космическая игра, в которой игроки сражаются с враждебными силами, спасая галактику.</p>
+                        <!-- <a href="#" class="btn btn-light mt-3">Узнать больше</a> -->
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="{% static 'images/space avengers.jpeg' %}" alt="Игра Space Avengers" class="img-fluid rounded-circle" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+{% endblock %}
+</html>
